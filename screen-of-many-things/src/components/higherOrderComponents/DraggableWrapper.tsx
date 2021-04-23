@@ -29,22 +29,24 @@ export const DraggableWrapper: React.FunctionComponent<DraggableWrapperProps> = 
 
   return (
     //handle is a css selector to the elements that will drag the window
+    <div className='layoutRoot'>
     <Draggable disabled={isResizing} handle=".dragHandle" >
+      <ResizableBox height={props.startHeight || 0} width={props.startWidth || 0} resizeHandles={props.resizeHandleLocations}
+        onResizeStart={resizeOn}
+        onResizeStop={resizeOff}
+      >
       <div className="topBox">
-            <div className="dragHandle">
-              {/* TODO make this drag part better */}
+          <div className="dragHandle">
+            {/* TODO make this drag part better */}
             dragHere
             </div>
-        <ResizableBox height={props.startHeight || 0} width={props.startWidth || 0} resizeHandles={props.resizeHandleLocations}
-          onResizeStart={resizeOn}
-          onResizeStop={resizeOff}
-        >
-            <div className='contentBox'>
-              {props.children}
-            </div>
-        </ResizableBox>
+          <div className='contentBox'>
+            {props.children}
+          </div>
         </div>
+      </ResizableBox>
     </Draggable>
+        </div>
   );
 };
 

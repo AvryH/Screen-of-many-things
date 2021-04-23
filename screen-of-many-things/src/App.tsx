@@ -9,6 +9,7 @@ function App() {
     <div className="App">
       <header className="App-header">
           <MapComponent startHeight={200} startWidth={200}/>
+          <TestComponent/>
       </header>
     </div>
   );

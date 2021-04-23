@@ -1,17 +1,36 @@
-.contentBox{
+.wrapper {
+  display: inline-block;
+}
+
+/* this keeps the top left corner stationary when resizing instead of the center of the box */
+.layoutRoot {
+  display: flex;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.topBox{
   height: 100%;
   width: 100%;
 }
 
-.dragHandle{
-   width: 100%; 
-  border-style: groove; /* this is just for testing */
+.contentBox{
+  height: calc( 100% - 4vh);
+  width: 100%;
 }
+
+.dragHandle{
+  width: 100%; 
+  height: 4vh;
+  overflow: hidden;
+  /* border-style: groove; this is just for testing */
+}
+
 
 /* This is from git hub mostly */
 .react-resizable {
     position: absolute;
-    border-style: dotted; /* this is just for testing */
+    /* border-style: dotted; this is just for testing */
   }
 .react-resizable-handle {
   position: absolute;
