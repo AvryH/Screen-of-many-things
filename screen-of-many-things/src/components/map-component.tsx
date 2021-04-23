@@ -1,4 +1,4 @@
-import React from "react";
+import React, { SyntheticEvent, useState } from "react";
 import { DraggableWrapper } from "./higherOrderComponents/DraggableWrapper";
 import "./map-component.css"
 
@@ -9,9 +9,12 @@ interface mapComponentProps {
 }
 
 export const MapComponent: React.FunctionComponent<mapComponentProps> = (props) => {
+
   return (
-    <DraggableWrapper startHeight={props.startHeight} startWidth={props.startWidth}>
-      <img className='mapBox' src={props.mapSrc} alt={props.mapSrc} draggable={false} height={props.startHeight}  width={props.startWidth}/>
+    <DraggableWrapper startHeight={props.startHeight} startWidth={props.startWidth} >
+      <div className='mapContainer'>
+        <img  className='mapImg' src={props.mapSrc} alt={props.mapSrc} draggable={false} />
+      </div>
     </DraggableWrapper>
   );
 };
