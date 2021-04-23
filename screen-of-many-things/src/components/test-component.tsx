@@ -1,5 +1,5 @@
 import React from "react";
-import { DraggableWrapper } from "./HOC/DraggableWrapper";
+import { DraggableWrapper } from "./higherOrderComponents/DraggableWrapper";
 
 interface testProps {
   inputText?: string

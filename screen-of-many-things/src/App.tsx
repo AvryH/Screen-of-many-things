@@ -21,7 +21,7 @@ function App() {
           Learn React
         </a>
           <TestComponent inputText="draggableComponent"/>
-          <MapComponent/>
+          <MapComponent startHeight={200} startWidth={200}/>
       </header>
     </div>
   );
