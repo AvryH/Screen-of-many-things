@@ -2,6 +2,7 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 import { TestComponent } from './components/test-component';
+import { MapComponent } from './components/map-component';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
           Learn React
         </a>
           <TestComponent inputText="draggableComponent"/>
+          <MapComponent/>
       </header>
     </div>
   );
